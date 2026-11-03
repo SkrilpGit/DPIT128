@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+
+<!-- Week 3: CSS Coding Exercises; Created by Jason Rodriguez -->
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <title>Week 3: CSS Coding Exercises</title>
+
+    <style>
+
+      /* BEGIN: Template CSS (DO NOT ALTER/REMOVE) ----------- */
+
+      hr {
+        border: none;
+        border-top: 1px dashed #939393;
+        margin-bottom: 20px;
+        margin-top: 20px;
+      }
+
+      /* END: Template CSS (DO NOT ALTER/REMOVE) ------------- */
+
+      /* Task 2 CSS Only ------------------------------------- */
+
+      p + span {
+        background-color: orange;
+      }
+
+      /* Task 4 CSS Only ------------------------------------- */
+
+      td,th {
+        border: 1px solid black;
+        padding: 10px;
+      }
+      table {
+        border-collapse: collapse;
+        margin: auto;
+      }
+
+      /* Task 5 CSS Only ------------------------------------- */
+
+      @keyframes my-animation {
+        0% { color: pink; }
+        20% { color: orange; }
+        40% { color: green; }
+        60% { color: blue; }
+        80% { color: red; }
+        100% { color: pink; }
+      }
+
+      #my-heading {
+        animation: my-animation 3s infinite;
+      }
+
+      /* Task 6 CSS Only ------------------------------------- */
+
+      p#my-paragraph > span:hover {
+        text-decoration: line-through;
+      }
+
+      #my-paragraph:hover {
+        animation: my-animation 1s infinite;
+      }
+
+    </style>
+
+  </head>
+
+  <body>
+
+    <h1>Week 3: CSS Coding Exercises</h1>
+
+    <hr>
+
+    <h3>Task 1: Place a 20 pixel <span style="text-decoration: underline;">horizontal</span> space between each of these images (inline CSS preferred):</h3>
+    
+    <img src="https://mywebspace.net.au/UOWC128/laboratories/laboratory_3/images/battlebots_trophy.png" alt="BattleBots Trophy">
+    <img src="https://mywebspace.net.au/UOWC128/laboratories/laboratory_3/images/battlebots_trophy.png"
+         alt="BattleBots Trophy" style="margin-left: 20px;margin-right: 20px">
+    <img src="https://mywebspace.net.au/UOWC128/laboratories/laboratory_3/images/battlebots_trophy.png" alt="BattleBots Trophy">
+    
+    <hr>
+
+    <h3>Task 2: Use a single CSS rule that includes a combinator to make the following changes (internal CSS required):</h3>
+
+    <p>This background should be displayed in the browser&apos;s default colour!</p>
+
+    <span>This background should be displayed in an orange colour!</span>
+
+    <p>This background should be displayed in the browser&apos;s default colour!</p>
+
+    <span>This background should be displayed in an orange colour!</span>
+
+    <span style="display: block; margin-top: 15px;">This background should be displayed in the browser&apos;s default colour!</span>
+
+    <hr>
+
+    <h3>Task 3: Show each of the following headings on a single line using the CSS &quot;display&quot; property (inline CSS preferred):</h3>
+
+    <h1 style="display: inline;">Heading 1</h1>
+    <h2 style="display: inline;">Heading 2</h2>
+    <h3 style="display: inline;">Heading 3</h3>
+    <h4 style="display: inline;">Heading 4</h4>
+    <h5 style="display: inline;">Heading 5</h5>
+    <h6 style="display: inline;">Heading 6</h6>
+
+    <hr>
+
+    <h3>Task 4: Apply a border, padding and page-centred alignment to this table (internal CSS required):</h3>
+
+    <table style="margin-bottom: 27px; text-align: left;">
+      <caption><a href="https://en.wikipedia.org/wiki/BattleBots#Weight_classes" target="_blank">BattleBot Weight Classes</a></caption>
+      <tr>
+        <th>Lightweight</th>
+        <td>60 pounds</td>
+        <td>27 kilograms</td>
+      </tr>
+      <tr>
+        <th>Middleweight</th>
+        <td>120 pounds</td>
+        <td>54 kilograms</td>
+      </tr>
+      <tr>
+        <th>Heavyweight</th>
+        <td>220 pounds</td>
+        <td>100 kilograms</td>
+      </tr>
+      <tr>
+        <th>Superheavyweight</th>
+        <td>340 pounds</td>
+        <td>154 kilograms</td>
+      </tr>
+    </table>
+
+    <hr>
+
+    <h3>Task 5: Apply a colour changing animation to the following &lt;h1&gt; element (internal CSS required):</h3>
+
+    <h1 id="my-heading">CSS Colour Animation</h1>
+
+    <hr>
+
+    <h3>Task 6: Code the appropriate CSS rules using a suitable combinator and pseudo-class to make these changes (internal CSS required):</h3>
+
+    <p id="my-paragraph">
+      This should have a special hover effect!
+      <br>
+      <br>
+      <span>This should inherit the same hover effect AND have a line-through effect as well!</span>
+    </p>
+
+    <hr>
+
+    <p style="color: #a3a3a3;">Created by Jason Rodriguez (Version 2.0)</p>
+
+  </body>
+
+</html>

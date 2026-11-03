@@ -31,6 +31,50 @@
       img {
         border-radius: 10px 10px 50px 50px;
       }
+      /* defining a crosshair behaviour on hover for video elements
+         using the video type selector, and the hover pseudo class.
+      */
+      video:hover{
+        cursor: crosshair;
+      }
+      /* defining a box shadow class as per the specification.
+      */
+      .shadow {
+        box-shadow: 10px 10px 10px #808080;
+      }
+      /* defining a rule for task 3 to use the Arial font in the sans-serif style
+         with a font size of 15px as per specification */
+      .task-3 {
+        font-family:  arial, sans-serif;
+        font-size: 15px;
+      }
+      /* as per task 5 specification, description list title set to bold with
+         shadow */
+      dt {
+        font-weight: bold;
+        text-shadow: 2px 2px 2px #bfbfbf;
+      }
+      /* table margin auto to centre it, border collapse for single border
+         th and td types given a 1px solid black border with 8px padding per specification */
+      table {
+        margin: auto;
+        border-collapse: collapse;
+      }
+      th, td {
+        border: 1px solid black;
+        padding: 8px;
+      }
+      /* aligning text to the left as per specification
+         font-size set to 14px so that it wraps like the demo screenshot */
+      .subject-name {
+        text-align: left;
+        font-size: 14px;
+      }
+      /* calibri font as a class per specification */
+      .cali {
+        font-family: calibri, sans-serif;
+        font-size: 16px;
+      }
 
     </style>
   </head>
@@ -67,7 +111,10 @@
 
     <!-- original video size is 640x480px as found through downloading it -->
     <!-- 3.41x2.68 inches (Google docs) = 250x192px @ 72PPI (Google docs) -->
-    <video controls style="width: 250px;height: 192px;">
+
+    <!-- using the shadow class as defined in the internal css to add an 
+      offset blurry shadow to the video -->
+    <video controls class="shadow" style="width: 250px;height: 192px;">
 
       <source src="https://mywebspace.net.au/UOWC128/assignment_1/videos/task_2.mp4" 
               type="video/mp4">
@@ -77,11 +124,29 @@
 
     <h2>Task 3</h2>
 
-    <div>
+    <!-- border dotted as per specification, using a class to define the font
+      and size of text -->
+    <div class="task-3" style="border: 1px dotted black">
 
       <!-- BEGIN: Task 3 Solution -->
 
-      INSERT SOLUTION HERE
+      <!-- nested unordered lists as per the specification -->
+      <ul style="list-style-type: square;">
+        <li>Introduction to Web Technology</li>
+        <li style="list-style-type: none"><ul>
+          <li>HTML &amp; CSS</li>
+          <li>HTML Forms</li>
+          <li>XML, DTD, XSD &amp; XSLT</li>
+          <li>JavaScript</li>
+          <li>AJAX &amp; JSON</li>
+        </ul></li>
+        <li>Networks and Communications</li>
+        <li>Object Oriented Design and Programming</li>
+        <li>Data Management and Security</li>
+        <li>System Analysis</li>
+        <li>Problem Solving</li>
+        <li>Programming Fundamentals</li>
+      </ul>
 
       <!-- END: Task 3 Solution -->
 
@@ -89,11 +154,28 @@
 
     <h2>Task 4</h2>
 
-    <div>
+    <!-- specification included a serif font, but didn't include a specific font -->
+    <div style="font-family: serif;">
 
       <!-- BEGIN: Task 4 Solution -->
 
-      INSERT SOLUTION HERE
+      <ol>
+        <li>Introduction to Web Technology</li>
+        <li>Networks and Communications</li>
+        <li>Object Oriented Design and Programming</li>
+        <li>Data Management and Security</li>
+        <li>System Analysis</li>
+        <li>Problem Solving</li>
+        <li>Programming Fundamentals</li>
+        <!-- list symbol type set to lowercase letters, and text set to italics -->
+        <li style="list-style-type: none"><ol type="a" style="font-style: italic;">
+          <li>Inputs &amp; Outputs</li>
+          <li>Programming Control Structures</li>
+          <li>Working with Methods</li>
+          <li>Working with Classes</li>
+          <li>Instantiating &amp; Messaging Objects</li>
+        </ol></li>
+      </ol>
 
       <!-- END: Task 4 Solution -->
 
@@ -104,8 +186,26 @@
     <div>
 
       <!-- BEGIN: Task 5 Solution -->
-
-      INSERT SOLUTION HERE
+      
+      <!-- serif font indicated from specification, margin and color set as per specification -->
+      <dl style="font-family:serif;margin-left: 25px; color: #2361b7;">
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language</dd>
+        <dt>CSS</dt>
+        <dd>Cascading Style Sheets</dd>
+        <dt>XML</dt>
+        <dd>eXtensible Markup Language</dd>
+        <dt>DTD</dt>
+        <dd>Document Type Definition</dd>
+        <dt>XSD</dt>
+        <dd>Xml Schema Definition</dd>
+        <dt>XSLT</dt>
+        <dd>eXtensible Stylesheet Language Transformations</dd>
+        <dt>AJAX</dt>
+        <dd>Asynchronous Javascript And Xml</dd>
+        <dt>JSON</dt>
+        <dd>JavaScript Object Notation</dd>
+      </dl>
 
       <!-- END: Task 5 Solution -->
 
@@ -115,10 +215,62 @@
 
     <!-- BEGIN: Task 6 Solution -->
 
-    INSERT SOLUTION HERE
+    <table class="cali" style="width: 700px;">
+      <caption style="font-weight: bold;margin-bottom: 10px">UOW College Examination Timetable - Summer Session 2024</caption>
+      <tr>
+        <!-- setting rowspan to 4, width to 25% so it matches below -->
+        <!-- 45% image size on the badge seems to be the right size -->
+        <td rowspan="4" colspan="1" style="width: 25%">
+          <img src="https://mywebspace.net.au/UOWC128/assignment_1/images/task_6.png" 
+          alt="UOW college badge"
+          style="height: auto;width: 45%;background-color: #f8f8f8">
+        </td>
+      <!-- forcing each of the subject names to stretch across three columns so they line up -->
+      <!-- applying the subject-name class for a specific font size and text alignment -->
+        <td colspan="3" class="subject-name">DPIT128 Introduction to Web Technology (Wollongong Only)</td>
+      </tr>
+      <tr>
+        <td colspan="3" class="subject-name">DPIT127 Networks &amp; Communications (Wollongong Only)</td>
+      </tr>
+      <tr>
+        <td colspan="3" class="subject-name">DPIT114 System Analysis (Wollongong &amp; South Western Sydney)</td>
+      </tr>
+      <tr>
+        <td colspan="3" class="subject-name">DPIT111 Programming Fundamentals (Wollongong &amp; South Western Sydney)</td>
+      </tr>
+      <!-- Exam times heading needs to span the 4 following columns, with background color per specification -->
+      <tr>
+        <th colspan="4" style="background-color: #d3d3d3">Examination Times, Rooms &amp; Durations</th>
+      </tr>
+      <!-- specifying that the exam cells should be evenly spaced -->
+      <tr>
+        <td style="width: 25%">DPIT128</td>
+        <td style="width: 25%">DPIT127</td>
+        <td style="width: 25%">DPIT114</td>
+        <td style="width: 25%">DPIT111</td>
+      </tr>
+      <tr>
+        <td>8:30am - 12:30pm</td>
+        <td>1:30pm - 4:30pm</td>
+        <td>8:30am - 11:30am</td>
+        <td>1:30pm - 3:30pm</td>
+      </tr>
+      <tr>
+        <td>30.108</td>
+        <td>30.109</td>
+        <td>27.103 &amp; 30.110</td>
+        <td>27.104 &amp; 30.110</td>
+      </tr>
+      <tr>
+        <td>3 Hours</td>
+        <td>3 Hours</td>
+        <td>3 Hours</td>
+        <td>2 Hours</td>
+      </tr>
+    </table>
 
     <!-- END: Task 6 Solution -->
 
-    <p>&copy; INSERT FULL NAME</p>
+    <p>&copy; Jessica Smith</p>
   </body>
 </html>
