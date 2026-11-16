@@ -53,6 +53,32 @@
 
       /* INSERT INTERNAL CSS HERE */
 
+      /* applying 20px of spacing between "rows" by using a class selector */
+      .row-spacing {
+        margin: 20px;
+      }
+      /* rounding applied through class selector per specification */
+      .rounded {
+        border-radius: 5px;
+      }
+      /* default font and size for div element per specification */
+      div {
+        font: arial, sans-serif;
+        font-size: 14px;
+      }
+      /* subtle off white colouring for the text input field as well
+         as padding and border per specification */
+      input[type="text"]{
+        background-color: #fffff9;
+        padding: 5px;
+        border: 1px dotted #404040;
+      }
+      /* overwriting the font and font-size for input elements per specification */
+      input {
+        font: arial;
+        font-size: 13px;
+      }
+
     </style>
   </head>
   <body>
@@ -71,7 +97,56 @@
 
     <!-- BEGIN: Task 2 Solution -->
 
-    INSERT SOLUTION HERE
+    <!-- creating a master div to contain our search box -->
+    <!-- includes the container class and rounded class with the background-color from specification -->
+    <div class="container rounded" style="background-color: #eaeff6;">
+
+      <!-- defining our form to send our query to google.com.au using the get request and in a new tab -->
+      <form action="https://www.google.com.au/search" method="get" target="_blank">
+        <!-- class row-spacing is used to define which elements should be blocked together -->
+        <div class="row-spacing">
+          <!-- using the youtube badge image per specification, 
+            and using a width of 200px to approximate the specification -->
+          <img src="https://mywebspace.net.au/UOWC128/assignment_2/images/task_2.png"
+          alt="Image of Google Badge"
+          style="width: 200px;margin-bottom: 20px;">
+        </div>
+
+        <div class="row-spacing">
+          <!-- setting the label with a spacing of 20px to approximate the specification -->
+          <label for="search" class="field-label">Search Terms:</label>
+
+          <!-- rounded class for rounded edges on the border -->
+          <!-- search_query as the name because that is the required parameter name for youtube -->
+          <input class="rounded" type="text" id="search" name="q" 
+          placeholder="Please enter search terms here..."
+          autofocus required style="width: 350px;"> <!-- width and booleans set per specification -->
+
+          <!-- defining a 10px spacing either side of the submit button to approximate the specification -->
+          <input class="rounded" type="submit" id="submit"  value="Submit" style="margin-right: 10px;margin-left:10px;">
+          <input class="rounded" type="reset" id="reset" value="Reset">
+        </div>
+
+        <div class="row-spacing">
+          <div>
+          <input type="radio" id="all-categories" name="udm" value="" checked>
+          <label for="all-categories">Show results for all categories</label>
+          </div>
+          <div>
+          <input type="radio" id="videos-only" name="udm" value="7">
+          <label for="videos-only">Show results for Videos only</label>
+          </div>
+          <div>
+          <input type="radio" id="images-only" name="udm" value="2">
+          <label for="images-only">Show results for Images only</label>
+          </div>
+          <div>
+          <input type="radio" id="news-only" name="udm" value="12">
+          <label for="news-only">Show results for News only</label>
+          </div>
+        </div>
+      </form>
+    </div>
 
     <!-- END: Task 2 Solution -->
 
