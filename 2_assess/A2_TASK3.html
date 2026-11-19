@@ -127,10 +127,18 @@
           <input class="rounded" type="reset" id="reset" value="Reset">
         </div>
         <div class="row-spacing">
-          <input type="checkbox" id="limit-12-items" name="sz" value="12">
+          <!-- including a checkbox to apply a 12 per page filter -->
+          <input type="checkbox" id="limit-12-items" name="sz" value="12" checked>
           <label for"limit-12-items">Limit search results to 12 items per page</label>
         </div>
-
+        <div class="row-spacing">
+          <!-- implementing a dropdown to apply the ascending and descending filters per specification -->
+          <select name="srule">
+            <option value="price-ascending" default>Sort items by price (ascending)</option>
+            <option value="price-descending">Sort items by price (descending)</option>
+          </select>
+        </div>
+      </form>
     </div>   
     <!-- END: Task 3 Solution -->
 
