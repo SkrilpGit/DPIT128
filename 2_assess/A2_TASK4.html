@@ -66,15 +66,15 @@
         font-family: arial, sans-serif;
         font-size: 14px;
       }
-      /* subtle off white colouring for the text input field as well
+      /* subtle off white colouring for the input fields as well
          as padding and border per specification */
       input[type="text"], input[type="email"], textarea, select{
         background-color: #fffff9;
         padding: 5px;
         border: 1px dotted #404040;
       }
-      /* overwriting the font and font-size for input elements per specification */
-      input {
+      /* overwriting the font and font-size for input, select and textarea elements per specification */
+      input, select, textarea{
         font-family: arial;
         font-size: 13px;
       }
@@ -104,11 +104,11 @@
 
     <!-- BEGIN: Task 4 Solution -->
 
-    <!-- creating a master div to contain our search box -->
+    <!-- creating a master div to contain our form -->
     <!-- includes the container class and rounded class with the background-color from specification -->
     <div class="container rounded" style="background-color: #f9fff9;">
 
-      <!-- defining our form to send our query to the PHP handler using the POST request and in a new tab -->
+      <!-- defining our form to send our queries to the PHP handler using the POST request and in a new tab -->
       <form action="https://mywebspace.net.au/UOWC128/assignment_2/php/task_4.php" method="post" target="_blank">
         <!-- class row-spacing is used to define which elements should be blocked together -->
         <div class="row-spacing">
@@ -126,7 +126,7 @@
           <!-- rounded class for rounded edges on the border -->
           <!-- full-name as the name because that is the required parameter name for the php handler -->
           <input class="rounded" type="text" id="name" name="full-name"
-          placeholder="Please full name here..."
+          placeholder="Please enter full name here..."
           autofocus required style="width: 350px;"> <!-- width and booleans set per specification -->
 
           <!-- defining a 10px spacing either side of the submit button to approximate the specification -->
@@ -137,7 +137,7 @@
         <div class="row-spacing">
 
           <!-- using the field-label class to line up the label in the same style -->
-          <label for"email" class="field-label">Email Address:</label>
+          <label for="email" class="field-label">Email Address:</label>
 
           <!-- using the email-address name value per specification, 350px width like the Full Name text field -->
           <input class="rounded" type="email" id="email" name="email-address"
@@ -146,11 +146,11 @@
         <div class="row-spacing">
 
           <!-- using the field-label to match with other elements -->
-          <label for"services[]" class="field-label">Services:</label>
+          <label for="services" class="field-label">Services:</label>
 
           <!-- services must have [] because php handlers need it to assign multiple values -->
           <!-- manually setting size to 4 because there are 4 options, at least one is required -->
-          <select class="rounded" name="services[]" multiple size=4 required>
+          <select class="rounded" id="services" name="services[]" multiple size="4" required>
             <option value="Consulting">Consulting</option>
             <option value="Designing">Designing</option>
             <option value="Implementation">Implementation</option>
@@ -159,11 +159,11 @@
         </div>
         <div class="row-spacing">
 
-          <!-- keeping the same formattingg by using the field-label -->
+          <!-- keeping the same formatting by using the field-label -->
           <label for="comments" class="field-label">Comments:</label>
 
           <!-- textarea is the correct choice for a longform text field, setting column and row sizes
-            to attempt lining up the area with other elements, it doesn't follow scalin when zooming however -->
+            to attempt lining up the area with other elements, it doesn't follow scaling when zooming however -->
           <textarea class="rounded" cols="45" rows="5" id="comments" name="comments" required style="resize: none;"></textarea>
         </div>
       </form>

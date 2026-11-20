@@ -52,7 +52,7 @@
       /* END: Template CSS (DO NOT ALTER/REMOVE) ------------- */
 
       /* INSERT INTERNAL CSS HERE */
-      
+
       /* applying 20px of spacing between "rows" by using a class selector */
       .row-spacing {
         margin: 20px;
@@ -73,8 +73,8 @@
         padding: 5px;
         border: 1px dotted #404040;
       }
-      /* overwriting the font and font-size for input elements per specification */
-      input {
+      /* overwriting the font and font-size for input and select elements per specification */
+      input, select {
         font-family: arial;
         font-size: 13px;
       }
@@ -98,14 +98,14 @@
     <!-- BEGIN: Task 3 Solution -->
 
     <!-- creating a master div to contain our search box -->
-    <!-- includes the container class and rounded class with the background-color from specification -->
+    <!-- includes the container class and rounded class with the background-image from specification -->
     <div class="container rounded" style="background-image: url(https://mywebspace.net.au/UOWC128/assignment_2/images/bg_tile.png);">
 
       <!-- defining our form to send our query to rebelsport.com.au/search using the get request and in a new tab -->
       <form action="https://www.rebelsport.com.au/search" method="get" target="_blank">
         <!-- class row-spacing is used to define which elements should be blocked together -->
         <div class="row-spacing">
-          <!-- using the rebel badge image per specification, 
+          <!-- using the rebel badge image per specification,
             and using a width of 325px to approximate the specification, used the background as a guide -->
           <img src="https://mywebspace.net.au/UOWC128/assignment_2/images/task_3.png"
           alt="Image of rebel badge"
@@ -117,8 +117,8 @@
           <label for="search" class="field-label">Search Terms:</label>
 
           <!-- rounded class for rounded edges on the border -->
-          <!-- q as the name because that is the required parameter name for Google search -->
-          <input class="rounded" type="text" id="search" name="q" 
+          <!-- q as the name because that is the required parameter name for rebel search -->
+          <input class="rounded" type="text" id="search" name="q"
           placeholder="Please enter search terms here..."
           autofocus required style="width: 350px;"> <!-- width and booleans set per specification -->
 
@@ -129,17 +129,17 @@
         <div class="row-spacing">
           <!-- including a checkbox to apply a 12 per page filter -->
           <input type="checkbox" id="limit-12-items" name="sz" value="12" checked>
-          <label for"limit-12-items">Limit search results to 12 items per page</label>
+          <label for="limit-12-items">Limit search results to 12 items per page</label>
         </div>
         <div class="row-spacing">
           <!-- implementing a dropdown to apply the ascending and descending filters per specification -->
-          <select name="srule">
-            <option value="price-ascending" default>Sort items by price (ascending)</option>
+          <select class="rounded" name="srule">
+            <option value="price-ascending" selected>Sort items by price (ascending)</option>
             <option value="price-descending">Sort items by price (descending)</option>
           </select>
         </div>
       </form>
-    </div>   
+    </div>
     <!-- END: Task 3 Solution -->
 
     <p>&copy; Jessica Smith</p>
