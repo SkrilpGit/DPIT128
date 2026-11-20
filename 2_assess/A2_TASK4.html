@@ -133,14 +133,23 @@
           <input class="rounded" type="submit" id="submit"  value="Submit" style="margin-right: 10px;margin-left:10px;">
           <input class="rounded" type="reset" id="reset" value="Reset">
         </div>
+        <!-- implementing an email box with the same styling as the name box above -->
         <div class="row-spacing">
+
+          <!-- using the field-label class to line up the label in the same style -->
           <label for"email" class="field-label">Email Address:</label>
+
+          <!-- using the email-address name value per specification, 350px width like the Full Name text field -->
           <input class="rounded" type="email" id="email" name="email-address"
           placeholder="Enter email..." required style="width: 350px;">
         </div>
         <div class="row-spacing">
+
+          <!-- using the field-label to match with other elements -->
           <label for"services[]" class="field-label">Services:</label>
-          <!-- implementing a dropdown to apply the ascending and descending filters per specification -->
+
+          <!-- services must have [] because php handlers need it to assign multiple values -->
+          <!-- manually setting size to 4 because there are 4 options, at least one is required -->
           <select class="rounded" name="services[]" multiple size=4 required>
             <option value="Consulting">Consulting</option>
             <option value="Designing">Designing</option>
@@ -149,7 +158,12 @@
           </select>
         </div>
         <div class="row-spacing">
+
+          <!-- keeping the same formattingg by using the field-label -->
           <label for="comments" class="field-label">Comments:</label>
+
+          <!-- textarea is the correct choice for a longform text field, setting column and row sizes
+            to attempt lining up the area with other elements, it doesn't follow scalin when zooming however -->
           <textarea class="rounded" cols="45" rows="5" id="comments" name="comments" required style="resize: none;"></textarea>
         </div>
       </form>
